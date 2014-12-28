@@ -1,0 +1,3 @@
+name: testing
+main: com.wildcraft.TestMain
+version: 0.1
