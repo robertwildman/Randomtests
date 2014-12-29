@@ -17,6 +17,7 @@ public class PlayerListener implements Listener {
 	public ItemMeta Compassdata,Watchdata,Tagdata,Diamonddata;
 	public void Itemloader()
 	{
+		//Loads starting items up
 		//COMPASS
 		Compass = new ItemStack(Material.COMPASS);
 		Compassdata = Compass.getItemMeta();
@@ -43,6 +44,7 @@ public class PlayerListener implements Listener {
 	@EventHandler
 	public void onPlayerJoined(PlayerJoinEvent event) 
 	{
+		//Gives welcome message and starting items
 		Itemloader();
 		event.getPlayer().sendMessage("Welcome to the Server. Use your inventory to move around the server!");
 		Player person = event.getPlayer();
@@ -55,6 +57,7 @@ public class PlayerListener implements Listener {
 	@EventHandler 
 	public void onPlayerrightclick(PlayerInteractEvent event)
 	{
+		//Opens Inventory when user clicks with item.
 		Itemloader();
 		if(event.getMaterial().equals(Material.COMPASS))
 		{
@@ -63,9 +66,9 @@ public class PlayerListener implements Listener {
 			event.getPlayer().openInventory(games);
 		}else if(event.getMaterial().equals(Material.WATCH))
 		{
-			Inventory games = Bukkit.createInventory(null, 9, "Hub Selector");
-			games.setItem(0, new ItemStack(Material.IRON_HELMET));
-			event.getPlayer().openInventory(games);
+			Inventory hub = Bukkit.createInventory(null, 9, "Hub Selector");
+			hub.setItem(0, new ItemStack(Material.IRON_HELMET));
+			event.getPlayer().openInventory(hub);
 		}
 	}
 }

@@ -13,7 +13,7 @@ public class TestMain extends JavaPlugin {
 	@Override 
 	public void onEnable()
 	{
-		System.out.println("Hello and welcome");
+		System.out.println("Hello and welcome to test puzzle");
 		PluginManager pm = getServer().getPluginManager();
 		pm.registerEvents(new InventoryListener(),this);
 		pm.registerEvents(new PlayerListener(),this);
