@@ -1,4 +1,4 @@
-Random Bukkir Stuff
+Random Bukkit Stuff
 ===========
 
 This is where I test and put up code of my bukkit api work. 
