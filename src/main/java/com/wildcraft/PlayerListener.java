@@ -3,6 +3,7 @@ package com.wildcraft;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -52,6 +53,9 @@ public class PlayerListener implements Listener {
 		person.getInventory().setItem(1,Watch);
 		person.getInventory().setItem(2,Tag);
 		person.getInventory().setItem(3,Diamond);
+		
+		//Firework on load
+		person.getWorld().spawnEntity(person.getLocation(),EntityType.FIREWORK);
 		
 	}
 	@EventHandler 
